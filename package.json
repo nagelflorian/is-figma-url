@@ -1,0 +1,22 @@
+{
+  "name": "is-figma-url",
+  "version": "1.0.0",
+  "description":
+    "Simple regex to check whether a string is a valid Figma live embed url",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "figma",
+    "figma-link",
+    "figma-url",
+    "figma-embed",
+    "figma-live-embed"
+  ],
+  "author": "Florian Nagel <hi@floriannagel.xyz> (https://floriannagel.xyz/)",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  }
+}

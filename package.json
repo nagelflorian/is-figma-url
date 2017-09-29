@@ -5,7 +5,8 @@
     "Simple regex to check whether a string is a valid Figma live embed url",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "yarn run test"
   },
   "keywords": [
     "figma",

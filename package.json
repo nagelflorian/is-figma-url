@@ -17,6 +17,14 @@
   ],
   "author": "Florian Nagel <hi@floriannagel.xyz> (https://floriannagel.xyz/)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nagelflorian/is-figma-url.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nagelflorian/is-figma-url/issues"
+  },
+  "homepage": "https://github.com/nagelflorian/is-figma-url#readme",
   "devDependencies": {
     "jest": "^21.2.1"
   }

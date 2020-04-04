@@ -1,6 +1,6 @@
 {
   "name": "is-figma-url",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple regex to check whether a string is a valid Figma live embed url",
   "main": "index.js",
   "scripts": {

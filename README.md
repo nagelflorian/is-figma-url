@@ -2,7 +2,11 @@
 
 Simple regex to check whether a string is a valid [Figma live embed](https://www.figma.com/platform) url.
 
-Written in TypeScript with full type definitions included.
+**Features:**
+- ✅ Written in TypeScript with full type definitions
+- ✅ Dual package: ESM and CommonJS support
+- ✅ Zero dependencies
+- ✅ Lightweight and fast
 
 ## Install
 
@@ -12,7 +16,7 @@ npm install is-figma-url --save
 
 ## Usage
 
-### TypeScript
+### ESM (ES Modules)
 
 ```typescript
 import isFigmaUrl from 'is-figma-url';
@@ -21,11 +25,22 @@ isFigmaUrl('https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File'); // 
 isFigmaUrl('https://www.google.com/'); // false
 ```
 
-### JavaScript
+### CommonJS
 
 ```javascript
-import isFigmaUrl from 'is-figma-url';
+const isFigmaUrl = require('is-figma-url').default;
 
 isFigmaUrl('https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File'); // true
 isFigmaUrl('https://www.google.com/'); // false
+```
+
+### TypeScript
+
+Full TypeScript support with type definitions included:
+
+```typescript
+import isFigmaUrl from 'is-figma-url';
+
+const url: string = 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File';
+const isValid: boolean = isFigmaUrl(url); // true
 ```

@@ -29,16 +29,6 @@ jobs:
       - name: Run tests
         run: yarn test --ci --coverage
 
-      - name: Upload coverage to Code Climate
-        if: matrix.node-version == '20.x'
-        uses: paambaati/codeclimate-action@v8
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        with:
-          coverageCommand: yarn test --coverage --coverageReporters=lcov
-          coverageLocations: ${{github.workspace}}/coverage/lcov.info:lcov
-        continue-on-error: true
-
       - name: Upload coverage reports to Codecov
         if: matrix.node-version == '20.x'
         uses: codecov/codecov-action@v4

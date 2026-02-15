@@ -1,5 +1,6 @@
 // Regex from https://www.figma.com/platform
-const REGEX = /https:\/\/([w.-]+\.)?figma.com\/(file|proto)\/([0-9a-zA-Z]{22,128})(?:\/.*)?$/;
+const REGEX =
+  /https:\/\/([w.-]+\.)?figma.com\/(file|proto)\/([0-9a-zA-Z]{22,128})(?:\/.*)?$/;
 
 /**
  * Checks whether a string is a valid Figma live embed URL

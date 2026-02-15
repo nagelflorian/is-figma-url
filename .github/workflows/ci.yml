@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [20.x, 22.x]
 
     steps:
       - uses: actions/checkout@v4
@@ -21,26 +21,32 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Run tests
-        run: yarn test --ci --coverage
+        run: npm test -- --ci --coverage
+
+      - name: Build
+        run: npm run build
+
+      - name: Test dual-package imports
+        run: npm run test:imports
 
       - name: Upload coverage to Code Climate
-        if: matrix.node-version == '20.x'
+        if: matrix.node-version == '22.x'
         uses: paambaati/codeclimate-action@v8
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
-          coverageCommand: yarn test --coverage --coverageReporters=lcov
+          coverageCommand: npm test -- --coverage --coverageReporters=lcov
           coverageLocations: ${{github.workspace}}/coverage/lcov.info:lcov
         continue-on-error: true
 
       - name: Upload coverage reports to Codecov
-        if: matrix.node-version == '20.x'
+        if: matrix.node-version == '22.x'
         uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}

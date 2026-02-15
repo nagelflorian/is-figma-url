@@ -20,6 +20,8 @@ npm install is-figma-url --save
 
 ```typescript
 import isFigmaUrl from 'is-figma-url';
+// or use the named export
+import { isFigmaUrl } from 'is-figma-url';
 
 isFigmaUrl('https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File'); // true
 isFigmaUrl('https://www.google.com/'); // false
@@ -28,19 +30,8 @@ isFigmaUrl('https://www.google.com/'); // false
 ### CommonJS
 
 ```javascript
-const isFigmaUrl = require('is-figma-url').default;
+const { isFigmaUrl } = require('is-figma-url');
 
 isFigmaUrl('https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File'); // true
 isFigmaUrl('https://www.google.com/'); // false
-```
-
-### TypeScript
-
-Full TypeScript support with type definitions included:
-
-```typescript
-import isFigmaUrl from 'is-figma-url';
-
-const url: string = 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File';
-const isValid: boolean = isFigmaUrl(url); // true
 ```

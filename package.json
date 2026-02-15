@@ -27,7 +27,8 @@
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:post": "node scripts/post-build.js",
     "test": "jest",
-    "prepublishOnly": "npm run build && npm test"
+    "test:imports": "node scripts/test-imports.cjs && node scripts/test-imports.mjs",
+    "prepublishOnly": "npm run build && npm test && npm run test:imports"
   },
   "keywords": [
     "figma",

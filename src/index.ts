@@ -6,6 +6,8 @@ const REGEX = /https:\/\/([w.-]+\.)?figma.com\/(file|proto)\/([0-9a-zA-Z]{22,128
  * @param url - The URL string to validate
  * @returns true if the URL is a valid Figma URL, false otherwise
  */
-export default function isFigmaUrl(url: string): boolean {
+export function isFigmaUrl(url: string): boolean {
   return REGEX.test(url);
 }
+
+export default isFigmaUrl;

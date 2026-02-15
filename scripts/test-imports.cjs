@@ -1,5 +1,5 @@
 // Test CommonJS import
-const isFigmaUrl = require('../dist/cjs/index.js').default;
+const isFigmaUrl = require('../dist/index.js').default;
 
 console.log('Testing CommonJS import...');
 const result1 = isFigmaUrl('https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File');

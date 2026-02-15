@@ -2,10 +2,15 @@
   "name": "is-figma-url",
   "version": "1.0.2",
   "description": "Simple regex to check whether a string is a valid Figma live embed url",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsc",
     "test": "jest",
-    "prepublishOnly": "npm test"
+    "prepublishOnly": "npm run build && npm test"
   },
   "keywords": [
     "figma",
@@ -25,7 +30,11 @@
   },
   "homepage": "https://github.com/nagelflorian/is-figma-url#readme",
   "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.2.3",
     "jest": "^30.2.0",
-    "jest-junit": "^16.0.0"
+    "jest-junit": "^16.0.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
   }
 }

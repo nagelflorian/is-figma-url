@@ -1,4 +1,4 @@
-const isFigmaUrl = require('../index');
+import isFigmaUrl from '../src/index';
 
 test('should return true for a valid figma live embed url', () => {
   const validUrl =

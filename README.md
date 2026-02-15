@@ -2,15 +2,28 @@
 
 Simple regex to check whether a string is a valid [Figma live embed](https://www.figma.com/platform) url.
 
+Written in TypeScript with full type definitions included.
+
 ## Install
 
-```
+```bash
 npm install is-figma-url --save
 ```
 
-## Quick start
+## Usage
 
-```js
+### TypeScript
+
+```typescript
+import isFigmaUrl from 'is-figma-url';
+
+isFigmaUrl('https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File'); // true
+isFigmaUrl('https://www.google.com/'); // false
+```
+
+### JavaScript
+
+```javascript
 import isFigmaUrl from 'is-figma-url';
 
 isFigmaUrl('https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File'); // true

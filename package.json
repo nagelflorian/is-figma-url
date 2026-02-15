@@ -37,6 +37,9 @@
     "figma-live-embed"
   ],
   "author": "Florian Nagel <hi@floriannagel.xyz> (https://floriannagel.xyz/)",
+  "engines": {
+    "node": ">=20"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",

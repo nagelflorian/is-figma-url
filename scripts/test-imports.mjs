@@ -1,5 +1,5 @@
 // Test ESM import
-import isFigmaUrl from '../dist/esm/index.js';
+import isFigmaUrl from '../dist/index.mjs';
 
 console.log('Testing ESM import...');
 const result1 = isFigmaUrl('https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File');
